@@ -7,7 +7,7 @@ The main objective of this script is to record data to give to an ISP and record
 Currently used the Task Scheduler to run this, but I'm going to look into other ways to have it running. I'd also like to consider the option of it being ran within a PowerShell window on another screen for example.
 
 
-TODO
+# TODO
 
 - Consistent Ping option, that will then report and retain the past X amount of pings. (Faster and more reliable feedback.)
 - Ponder existence
