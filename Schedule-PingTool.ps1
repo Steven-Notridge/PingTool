@@ -1,7 +1,7 @@
 # Schedule Job for PingTool, and start displaying as log file. I don't want to have to type any commands to start and monitor everything.
 
 $JobAlive = Get-ScheduledJob -Name "PingTool" -ErrorAction SilentlyContinue
-$FilePath = "C:\Sysadmin\GitCommits\PingTool\PingToolv2.ps1"
+$FilePath = "C:\Sysadmin\GitCommits\PingTool\PingTool.ps1"
 $TaskTrigger = (New-JobTrigger -Once -At "07/03/2022 0am" -RepetitionInterval (New-TimeSpan -Minutes 1) -RepetitionDuration ([TimeSpan]::MaxValue))
 
 If ([bool]($JobAlive) -eq $False){
