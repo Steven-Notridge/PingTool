@@ -4,7 +4,8 @@ The main objective of this script is to record data to give to an ISP and record
 
 # Running as a background script.
 
-Download both scripts and place them into a folder. You'll need to amend the actual path's within the scripts to reflect this. Open a PowerShell window, and navigate to that path. Run Schedule-PingTool and it'll create the ScheduledJob for you, check it if it's not available, or start it if it was previously stopped. This has now been updated as of 11/07 - my initial error checking was not good enough and I've added more to it. I've also added a way to fix the scheduled job if it has any errors. 
+Download both scripts and place them into a folder. You'll need to amend the actual path's within the scripts to reflect this. Open a PowerShell window, and navigate to that path. Run Schedule-PingTool and it'll create the ScheduledJob for you, check it if it's not available, or start it if it was previously stopped. 
+This has now been updated as of 11/07 - my initial error checking was not good enough and I've added more to it. I've also added a way to fix the scheduled job if it has any errors. 
 
 If you want to stop the ScheduledJob from running, do the following;
 
