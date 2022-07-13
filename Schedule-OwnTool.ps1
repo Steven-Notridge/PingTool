@@ -24,7 +24,7 @@ function Remove-OldJobs {
 $JobName = Read-Host -Prompt "What's the name of the Job?"
 $JobAlive = Get-ScheduledJob -Name "$JobName" -ErrorAction SilentlyContinue
 $FilePath = Read-Host -Prompt "Please give the full path of your script."
-$Date = Get-Date
+$Date = Get-Date -Format dd/MM/yyyy
 $TaskTrigger = (New-JobTrigger -Once -At "$Date" -RepetitionInterval (New-TimeSpan -Minutes 1) -RepetitionDuration ([TimeSpan]::MaxValue))
 
 # Start - (L01)

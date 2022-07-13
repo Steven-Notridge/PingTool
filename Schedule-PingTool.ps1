@@ -23,7 +23,7 @@ function Remove-OldJobs {
 
 $JobAlive = Get-ScheduledJob -Name "PingTool" -ErrorAction SilentlyContinue
 $FilePath = "C:\Sysadmin\GitCommits\PingTool\PingTool.ps1"
-$Date = Get-Date
+$Date = Get-Date -Format dd/MM/yyyy
 $TaskTrigger = (New-JobTrigger -Once -At "$Date" -RepetitionInterval (New-TimeSpan -Minutes 1) -RepetitionDuration ([TimeSpan]::MaxValue))
 
 # Start - (L01)
