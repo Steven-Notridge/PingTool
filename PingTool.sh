@@ -27,7 +27,7 @@ while true;
                         echo "Connection to Router is alive. Internet appears to be down." >> $FILE
                     fi
         fi
-        RESULTS=$(ping -c 5 8.8.8.8 | tail -1)
+        RESULTS=$(ping -c 5 1.1.1.1 | tail -1)
         RESULTSAVG=$(echo $RESULTS | awk -F '/' '{print $5}' | cut -d "." -f 1 )
         RESULTSMAX=$(echo $RESULTS | awk -F '/' '{print $6}' | cut -d "." -f 1 )
         if [[ $RESULTSMAX -gt 75 ]]; then
