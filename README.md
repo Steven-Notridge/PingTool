@@ -26,7 +26,7 @@ Although you can use the intial version I uploaded, I realised that I can't actu
 Guide;
 
 - `cd /opt/`
-- `git pull https://github.com/Steven-Notridge/PingTool/`
+- `git clone https://github.com/Steven-Notridge/PingTool/`
 - Remove example log.txt file = `rm /opt/PingTool/log.txt`
 - `crontab -e`
 - Add line to the bottom = `* * * * * /opt/PingTool/PingTool.sh >> /opt/PingTool/CronLog.txt`
