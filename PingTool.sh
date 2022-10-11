@@ -34,5 +34,5 @@ if [[ -f "$FILE" ]]; then
     RESULTSMAX=$(echo $RESULTS | awk -F '/' '{print $6}' | cut -d "." -f 1 )
 if [[ $RESULTSMAX -gt 75 ]]; then
     echo >> $FILE
-    echo "["$DATE"]" "Ping is reaching high values. The average response time was" $RESULTSAVG "ms to "$TARGET">        
+    echo "["$DATE"]" "Ping is reaching high values. The average response time was" $RESULTSAVG "ms to "$TARGET", whilst the maximum response time was "$RESULTSMAX >> $FILE
     fi
