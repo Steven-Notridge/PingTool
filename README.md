@@ -4,6 +4,8 @@ The main objective of this script is to record data to give to an ISP and record
 
 # Running as a background script.
 
+### PowerShell
+
 Download both scripts (PingTool.ps1 and Schedule-PingTool.ps1) and place them into a folder. You'll need to amend the actual path's within the scripts to reflect this. Open a PowerShell window, and navigate to that path. Run Schedule-PingTool and it'll create the ScheduledJob for you, check it if it's not available, or start it if it was previously stopped. 
 
 This has now been updated as of 11/07 - my initial error checking was not good enough and I've added more to it. I've also added a way to fix the scheduled job if it has any errors. 
@@ -16,6 +18,23 @@ If you want to stop the ScheduledJob from running, do the following;
 - Check if it still exists by using `'Get-ScheduledJob'`
 
 You can also just Disable it and leave it alive by using the first command.
+
+### Linux
+
+Although you can use the intial version I uploaded, I realised that I can't actually use this over an SSH session because it'll kill the process whenever I disconnect... I don't really wanna stay connected, I just want the data to be recorded. So I've updated it to be used with Cronjob. 
+
+Guide;
+
+- `cd /opt/`
+- `git pull https://github.com/Steven-Notridge/PingTool/`
+- Remove example log.txt file = `rm /opt/PingTool/log.txt`
+- `crontab -e`
+- Add line to the bottom = `* * * * * /opt/PingTool/PingTool.sh >> /opt/PingTool/CronLog.txt`
+- Check after 1 minute to see if log files have been created.
+- `cat /opt/PingTool/log.txt`
+- `cat /opt/PingTool/CronLog.txt`
+
+
 
 # What I learnt from this
 
