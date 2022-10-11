@@ -1,3 +1,5 @@
+#!/bin/bash
+
 FILE=log.txt
 TARGET=1.1.1.1
 ROUTER=192.168.0.1
