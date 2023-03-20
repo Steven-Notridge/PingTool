@@ -2,6 +2,10 @@
 
 The main objective of this script is to record data to give to an ISP and record the timings, if it spikes during the day. Running a ping test consistently is pretty long and annoying. We test the connection to the outside world. If the connection is down, it records the time and date, also proving the connection to the router was alive. If it's not, it records that too. In my case, it kept restarting randomly too. If the connection is alive, but the ping is high, it will record that information as well as where it is going to. I've also now added *Schedule-OwnTool.ps1*, as a template for yourself if you want to use this format with a job of your own. 
 
+# Compatibility
+
+Ran into some more ISP issues and went to use my tool but turns out it's not compatible with PowerShell 7 due to the `PSScheduledJob` module being on the `WindowsPowerShellCompatibilityModuleDenyList`. I didn't really want to use Scheduled Tasks for this but I guess I'll have to update it. 
+
 # Running as a background script.
 
 ### PowerShell
