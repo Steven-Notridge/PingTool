@@ -6,6 +6,8 @@ The main objective of this script is to record data to give to an ISP and record
 
 Ran into some more ISP issues and went to use my tool but turns out it's not compatible with PowerShell 7 due to the `PSScheduledJob` module being on the `WindowsPowerShellCompatibilityModuleDenyList`. I didn't really want to use Scheduled Tasks for this but I guess I'll have to update it. 
 
+To run within `5.1` instead of using your terminal and executing the script, launch `5.1` by typing `powershell.exe` and then run the script. I'll investigate running as a ScheduledTask but I really didn't wanna use that because I don't think it's good for this use.
+
 # Running as a background script.
 
 ### PowerShell
