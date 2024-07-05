@@ -32,6 +32,7 @@ if [[ -f "$FILE" ]]; then
                 echo "Ping failure to "$ROUTER "Did it restart?" >> $FILE
                     else
                     echo "Connection to Router is alive. Internet appears to be down." >> $FILE
+                    curl "$GOTIFY/message?token=$TOKEN" -F "title=Internet Down" -F "message=Connection to Router is alive, internet is down." -F "priority=5"
             fi
     fi
     RESULTS=$(ping -c 5 1.1.1.1 | tail -1)
